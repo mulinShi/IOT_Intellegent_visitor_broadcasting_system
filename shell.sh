@@ -11,7 +11,8 @@ mysql -h database-2.caf3kfsfob9t.us-east-2.rds.amazonaws.com -P 3306 -u shi -p
 sudo apt-get install libmysql-java
 
 ------configuration for Java enviroment
-TODO-------------------
+export CLASSPATH=$CLASSPATH:/usr/share/java/mysql-connector-java.jar
+
 
 ------Parameter for Database 
 String url = "jdbc:mysql://database-2.caf3kfsfob9t.us-east-2.rds.amazonaws.com:3306/";
