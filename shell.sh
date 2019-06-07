@@ -6,7 +6,9 @@ ssh -i "C:\key\test.pem" ubuntu@ec2-18-217-166-223.us-east-2.compute.amazonaws.c
 sudo apt-get update
 sudo apt-get install mysql-server
 3. login remote mysql
-mysql -h database-2.caf3kfsfob9t.us-east-2.rds.amazonaws.com -P 3306 -u shi -p
+mysql -h db.cn8ieh7jpixa.us-west-2.rds.amazonaws.com -P 3306 -u admin -p
+dawang99
+
 4. Setting Up MySQL/JDBC Driver on Ubuntu
 sudo apt-get install libmysql-java
 
