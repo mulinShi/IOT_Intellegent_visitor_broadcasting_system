@@ -48,6 +48,18 @@ class JDBCTest {
         }
     }
 }
+------configure cli and private key
+aws configure
+cd ~/.aws
+make file : credentials 
+contents:
+[default]
+aws_access_key_id = your_access_key_id
+aws_secret_access_key = your_secret_access_key
+config 
+contents:
+[default]
+region = us-east-1
 
 
 
