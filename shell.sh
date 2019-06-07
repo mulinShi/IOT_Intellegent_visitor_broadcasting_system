@@ -22,6 +22,33 @@ String dbName = "database-2";
 String driver = "com.mysql.jdbc.Driver";
 Connection connection = DriverManager.getConnection(url + dbName, userName, password);
 
+-----Test JDBC
+import java.sql.*;
+import java.util.Properties;
+
+class JDBCTest {
+ 
+    String url = "jdbc:mysql://database-2.caf3kfsfob9t.us-east-2.rds.amazonaws.com:3306/";
+    private static final String user = "shi";
+    private static final String password = "dafeifei";
+    String dbName = ""
+ 
+    public static void main(String args[]) {
+        try {
+            Connection connect = DriverManager.getConnection(url+dbName, user, password);
+            System.out.println("Successully fetch");
+            Statement  statement = connect.createStatement();
+            // Result set get the result of the SQL query
+            ResultSet resultSet = statement
+                    .executeQuery("select * from feedback.comments");
+            writeResultSet(resultSet);
+ 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+
 
 
 
