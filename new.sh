@@ -5,8 +5,8 @@
 # 看起来我的ec2上跑不了  写入凭证也不行  大概得在key来源的账户上才能用(王八账户上)
 
 # 权限配置
-export AWS_ACCESS_KEY_ID = AKIAZOE75PO2ZOQ2JRXQ
-export AWS_SECRET_ACCESS_KEY = 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
+export AWS_ACCESS_KEY_ID=AKIAJCA23ZDA4N7FB6LA
+export AWS_SECRET_ACCESS_KEY=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
 
 
 # 简单几行的tomcat安装法
