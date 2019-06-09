@@ -7,3 +7,5 @@
 * `iot.sql` : Mysql configuration
 * `iot.war` : Packaged Java Web Application
 * `new.sh` : Linux configuration
+* `test.py` :  Test for Web Application, simulate Visit, and return voice on running host. *Requirment: pygame module*
+
