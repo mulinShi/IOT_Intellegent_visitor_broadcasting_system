@@ -1,30 +1,29 @@
-#
-#
-#
-#
-# 看起来我的ec2上跑不了  写入凭证也不行  大概得在key来源的账户上才能用(王八账户上)
-
-# 权限配置
-export AWS_ACCESS_KEY_ID=AKIAJCA23ZDA4N7FB6LA
-export AWS_SECRET_ACCESS_KEY=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
+# Configure the EC2 instance
 
 
-# 简单几行的tomcat安装法
+# install tomcat8
 git clone https://github.com/mulinShi/IOT_Project2
 sudo su
 sudo apt update
 sudo apt -y install tomcat8
 
-# 把war传过来
-# pscp project.war ubuntu@ip:/home/ubuntu
+# move the web project file
 mv /home/ubuntu/IOT_Project2/iot.war /var/lib/tomcat8/webapps
 
-# 绑定80到8080
+# bind port 80 to 8080
 /sbin/iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
 
+# install awscli for use AWS Rekognition API
+sudo apt -y install python3-pip
+pip3 install awscli
+aws configure
+AWS_ACCESS_KEY_ID = YOUR_ACCESS_KEY
+AWS_SECRET_ACCESS_KEY = YOUR_SECRET_KEY
+
+# config the tomcat8 home page
+sed -i '/<!-- Access/i\        <Context path="" docBase="/var/lib/tomcat8/webapps/iot" debug="0" privileged="true" reloadable="true"/>' /var/lib/tomcat8/conf/server.xml
+
+# log file are locate at: /var/lib/tomcat8/webapps/logs/catalina.out
+
+# start tomcat8
 service tomcat8 start
-
-# 这个是绑定主页ip的  暂时可以不加  访问就用ip/iot
-<Context path="" docBase="/var/lib/tomcat8/webapps/iot" debug="0" privileged="true" reloadable="true"/>  
-
-# 日志在/var/lib/tomcat8/webapps/logs/catalina.out
