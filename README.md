@@ -1,5 +1,8 @@
 # IOT_Project2
 
+##Project intrudaction
+This project is designed to implement a visitor broadcasting system.
+
 ## Usage
 
 * `server` :  Java sourse file
