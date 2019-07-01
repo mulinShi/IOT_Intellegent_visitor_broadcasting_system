@@ -1,6 +1,6 @@
 # IOT_Project2
 
-##Project intrudaction
+##Project introduction
 This project is designed to implement a visitor broadcasting system.
 
 ## Usage
